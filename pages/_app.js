@@ -1,6 +1,9 @@
+import { theme } from "styles/theme"
 import App from "next/app"
 import Head from "next/head"
 import "../assets/css/style.css"
+import { motion } from "framer-motion"
+import { ChakraProvider } from "@chakra-ui/react"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
@@ -8,17 +11,36 @@ import { getStrapiMedia } from "../lib/media"
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps, router }) => {
   const { global } = pageProps
 
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
-      </Head>
-      <GlobalContext.Provider value={global}>
-        <Component {...pageProps} />
-      </GlobalContext.Provider>
+      <ChakraProvider resetCSS theme={theme}>
+        {/* <ChakraProvider resetCSS> */}
+        <Head>
+          <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
+        </Head>
+        <GlobalContext.Provider value={global}>
+          <motion.div
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            variants={{
+              pageInitial: {
+                scale: 1.2,
+                opacity: 0,
+              },
+              pageAnimate: {
+                scale: 1,
+                opacity: 1,
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </GlobalContext.Provider>
+      </ChakraProvider>
     </>
   )
 }
