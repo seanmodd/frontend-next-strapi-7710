@@ -1,15 +1,15 @@
+"use strict";
 exports.id = 593;
 exports.ids = [593];
 exports.modules = {
 
 /***/ 8593:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ articles; }
+  "Z": () => (/* binding */ articles)
 });
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
@@ -59,7 +59,7 @@ const Card = ({
   });
 };
 
-/* harmony default export */ var card = (Card);
+/* harmony default export */ const card = (Card);
 ;// CONCATENATED MODULE: ./components/articles.js
 
 
@@ -97,7 +97,7 @@ const Articles = ({
   });
 };
 
-/* harmony default export */ var articles = (Articles);
+/* harmony default export */ const articles = (Articles);
 
 /***/ })
 

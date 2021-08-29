@@ -1,17 +1,18 @@
+"use strict";
 exports.id = 672;
 exports.ids = [672];
 exports.modules = {
 
 /***/ 883:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "p": function() { return /* binding */ getStrapiURL; },
-/* harmony export */   "I": function() { return /* binding */ fetchAPI; }
+/* harmony export */   "p": () => (/* binding */ getStrapiURL),
+/* harmony export */   "I": () => (/* binding */ fetchAPI)
 /* harmony export */ });
 function getStrapiURL(path = "") {
-  return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"}${path}`;
+  return `${// process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+  process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://nextjs-strapiapi.herokuapp.com"}${path}`;
 } // Helper to make GET requests to Strapi
 
 async function fetchAPI(path) {
@@ -24,11 +25,10 @@ async function fetchAPI(path) {
 /***/ }),
 
 /***/ 1422:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "$": function() { return /* binding */ getStrapiMedia; }
+/* harmony export */   "$": () => (/* binding */ getStrapiMedia)
 /* harmony export */ });
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(883);
 
@@ -40,12 +40,12 @@ function getStrapiMedia(media) {
 /***/ }),
 
 /***/ 7672:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "GlobalContext": function() { return /* binding */ GlobalContext; }
+/* harmony export */   "GlobalContext": () => (/* binding */ GlobalContext),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5282);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
@@ -112,7 +112,7 @@ MyApp.getInitialProps = async ctx => {
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MyApp);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);
 
 /***/ })
 
