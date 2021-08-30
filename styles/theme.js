@@ -13,15 +13,16 @@ export const theme = extendTheme({
     global: (props) => ({
       h1: {
         textShadow: "-1px 1px 1px #ff00007e",
-        fontFamily: "Poppins, sans-serif",
+        // fontFamily: "Poppins, sans-serif",
         fontSize: "4.5rem",
         textAlign: "center",
-        color: props.colorMode === "dark" ? "red.400" : "#ff00ea",
+        alignContent: "center",
+        // color: props.colorMode === "dark" ? "red.400" : "#ff00ea",
         transition: "all 0.1s ease-in-out",
-        fontWeight: "semibold",
+        // fontWeight: "semibold",
         letterSpacing: "-0.02em",
         // lineHeight: '1.5',
-        padding: "0 1rem",
+        // padding: "0 1rem",
         textShadow:
           props.colorMode === "dark" ? "2px 1px red" : "0px 1px#0000006c",
         _hover: {

@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react"
 import React from "react"
 import Articles from "../components/articles"
 import Layout from "../components/layout"
@@ -10,7 +11,9 @@ const Home = ({ articles, categories, homepage }) => {
       <Seo seo={homepage.seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <h1>{homepage.hero.title}</h1>
+          <Box mb="30px">
+            <h1>{homepage.hero.title}</h1>
+          </Box>
           <Articles articles={articles} />
         </div>
       </div>

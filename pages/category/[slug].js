@@ -2,6 +2,7 @@ import Articles from "../../components/articles"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
+import { Box } from "@chakra-ui/react"
 
 const Category = ({ category, categories }) => {
   const seo = {
@@ -14,7 +15,9 @@ const Category = ({ category, categories }) => {
       <Seo seo={seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <h1>{category.name}</h1>
+          <Box mb="30px">
+            <h1>{category.name}</h1>
+          </Box>
           <Articles articles={category.articles} />
         </div>
       </div>

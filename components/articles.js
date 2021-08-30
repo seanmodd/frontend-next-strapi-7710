@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react"
 import React from "react"
 import Card from "./card"
 
@@ -12,7 +13,12 @@ const Articles = ({ articles }) => {
         <div>
           {leftArticles.map((article, i) => {
             return (
-              <Card article={article} key={`article__left__${article.slug}`} />
+              <Box borderWidth="1px">
+                <Card
+                  article={article}
+                  key={`article__left__${article.slug}`}
+                />
+              </Box>
             )
           })}
         </div>
@@ -20,10 +26,12 @@ const Articles = ({ articles }) => {
           <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
             {rightArticles.map((article, i) => {
               return (
-                <Card
-                  article={article}
-                  key={`article__left__${article.slug}`}
-                />
+                <Box borderWidth="1px">
+                  <Card
+                    article={article}
+                    key={`article__left__${article.slug}`}
+                  />
+                </Box>
               )
             })}
           </div>
