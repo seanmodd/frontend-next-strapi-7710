@@ -10,14 +10,11 @@ exports.modules = {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
-/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5282);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_articles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8593);
-/* harmony import */ var _lib_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(883);
+/* harmony import */ var _components_articles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7966);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6347);
 /* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8303);
 /* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3426);
@@ -28,58 +25,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // const Category = ({ category, categories }) => {
 
-
-const Category = ({
-  category,
-  categories
-}) => {
-  const seo = {
-    metaTitle: category.name,
-    metaDescription: `All ${category.name} articles`
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components_layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
-    categories: categories,
-    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_seo__WEBPACK_IMPORTED_MODULE_3__/* .default */ .Z, {
-      seo: seo
-    }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-      className: "uk-section",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "uk-container uk-container-large",
-        children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-          children: category.name
-        }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_articles__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z, {
-          articles: category.articles
-        })]
+const Category = () => {
+  // const seo = {
+  //   metaTitle: category.name,
+  //   metaDescription: `All ${category.name} articles`,
+  // }
+  return (
+    /*#__PURE__*/
+    // <Layout categories={categories}>
+    react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_layout__WEBPACK_IMPORTED_MODULE_2__/* .default */ .Z, {
+      children: /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: "uk-section",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          className: "uk-container uk-container-large",
+          children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+            children: "Slug Page"
+          }), /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_articles__WEBPACK_IMPORTED_MODULE_1__/* .default */ .Z, {})]
+        })
       })
-    })]
-  });
-};
+    })
+  );
+}; // export async function getStaticPaths() {
+//   const categories = await fetchAPI("/categories")
+//   return {
+//     paths: categories.map((category) => ({
+//       params: {
+//         slug: category.slug,
+//       },
+//     })),
+//     fallback: false,
+//   }
+// }
+// export async function getStaticProps({ params }) {
+//   const category = (await fetchAPI(`/categories?slug=${params.slug}`))[0]
+//   const categories = await fetchAPI("/categories")
+//   return {
+//     props: { category, categories },
+//     revalidate: 1,
+//   }
+// }
 
-async function getStaticPaths() {
-  const categories = await (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/categories");
-  return {
-    paths: categories.map(category => ({
-      params: {
-        slug: category.slug
-      }
-    })),
-    fallback: false
-  };
-}
-async function getStaticProps({
-  params
-}) {
-  const category = (await (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)(`/categories?slug=${params.slug}`))[0];
-  const categories = await (0,_lib_api__WEBPACK_IMPORTED_MODULE_5__/* .fetchAPI */ .I)("/categories");
-  return {
-    props: {
-      category,
-      categories
-    },
-    revalidate: 1
-  };
-}
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Category);
 
 /***/ }),
@@ -238,7 +226,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,544,675,891,586,593], () => (__webpack_exec__(635)));
+var __webpack_exports__ = __webpack_require__.X(0, [664,544,675,891,160], () => (__webpack_exec__(635)));
 module.exports = __webpack_exports__;
 
 })();
