@@ -8,7 +8,7 @@ import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { Provider } from "next-auth/client"
 import { getStrapiMedia } from "../lib/media"
-import Navbar from "./Navbar"
+import Navbar from "../components/Navbar"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
