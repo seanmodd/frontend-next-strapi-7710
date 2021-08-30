@@ -11,9 +11,8 @@ exports.modules = {
 /* harmony export */   "I": () => (/* binding */ fetchAPI)
 /* harmony export */ });
 function getStrapiURL(path = "") {
-  return `${"https://nextjs-strapiapi.herokuapp.com/" || 0 // process.env.NEXT_PUBLIC_STRAPI_API_URL ||
-  // "https://nextjs-strapiapi.herokuapp.com"
-  }${path}`;
+  return `${// process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+  "https://nextjs-strapiapi.herokuapp.com/" || 0}${path}`;
 } // Helper to make GET requests to Strapi
 
 async function fetchAPI(path) {
