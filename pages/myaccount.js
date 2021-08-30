@@ -42,7 +42,7 @@ export async function getServerSideProps(context) {
   if (!session) {
     return {
       redirect: {
-        destination: '/api/auth/signin?callbackUrl=http://localhost:3000/',
+        destination: '/api/auth/signin?callbackUrl=https://nextjs-strapiapi.netlify.app/',
         permanent: false,
       },
     };
