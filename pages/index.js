@@ -12,7 +12,7 @@ const Home = ({ articles, categories, homepage }) => {
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <Box mb="30px">
-            <h1>{homepage.hero.title}</h1>
+            {/* <h1>{homepage.hero.title}</h1> */}
           </Box>
           <Articles articles={articles} />
         </div>
