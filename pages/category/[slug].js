@@ -1,7 +1,7 @@
-import Articles from "../../components/articles"
+import Articles from "../../components/blog/articles"
 import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Layout from "../../components/blog/layout"
+import Seo from "../../components/blog/seo"
 import { Box } from "@chakra-ui/react"
 
 // const Category = ({ category, categories }) => {
