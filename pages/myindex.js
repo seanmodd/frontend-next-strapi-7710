@@ -1,10 +1,10 @@
-import { Heading, VStack } from "@chakra-ui/react"
+import { Heading, VStack } from '@chakra-ui/react'
 
 export default function Home() {
   return (
     <VStack bg="white" mt="50px">
       <Heading>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
+        Welcome more test to <a href="https://nextjs.org">Next.js!</a>
       </Heading>
     </VStack>
   )

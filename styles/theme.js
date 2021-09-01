@@ -30,11 +30,11 @@ export const theme = extendTheme({
         },
       },
 
-      body: {
-        color: props.colorMode === "dark" ? "gray.50" : "gray.800",
-        backgroundColor: props.colorMode === "dark" ? "gray.900" : "gray.100",
-        transition: "all 0.1s ease-in-out",
-      },
+      // body: {
+      //   color: props.colorMode === "dark" ? "gray.50" : "gray.800",
+      //   backgroundColor: props.colorMode === "dark" ? "gray.900" : "gray.100",
+      //   transition: "all 0.1s ease-in-out",
+      // },
       input: {
         backgroundColor: props.colorMode === "dark" ? "gray.900" : "gray.100",
         boxShadow: "md",

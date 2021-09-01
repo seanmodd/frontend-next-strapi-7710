@@ -4,41 +4,25 @@ import { SimpleGrid, Box } from "@chakra-ui/react"
 
 function Navbar() {
   const [session, loading] = useSession()
-  // console.log(
-  //   `Here is the session: ${session} Here is the loading: ${loading}`
-  // );
+
   return (
-    <>
-      <nav className="main-nav">
         <SimpleGrid
-          justifyContent="center"
-          alignItems="center"
-          px="300px"
-          pb="0px"
-          minChildWidth="160px"
-          spacing="0px"
+          columns={[2, 2, 4, 5]}
+          pt="50px"
+          pl="250px"
         >
-          <Box h="45px">
             <Link href="/">
               <a>Home</a>
-            </Link>
-          </Box>
-          <Box h="45px">
+            </Link>    
             <Link href="/mypage">
               <a>My Page</a>
             </Link>
-          </Box>
-          <Box h="45px">
             <Link href="/myindex">
               <a>My Index</a>
             </Link>
-          </Box>
-          <Box h="45px">
             <Link href="/myaccount">
               <a>My Account</a>
             </Link>
-          </Box>
-          <Box h="45px">
             {!loading && !session && (
               <Link href="/api/auth/signin">
                 <a
@@ -63,11 +47,7 @@ function Navbar() {
                 </a>
               </Link>
             )}
-          </Box>
         </SimpleGrid>
- 
-      </nav>
-    </>
   )
 }
 
