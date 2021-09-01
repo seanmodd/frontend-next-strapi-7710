@@ -1,53 +1,62 @@
-import Link from "next/link"
-import { signIn, signOut, useSession } from "next-auth/client"
-import { SimpleGrid, Box } from "@chakra-ui/react"
+import Link from 'next/link'
+import { signIn, signOut, useSession } from 'next-auth/client'
+import { SimpleGrid, Box } from '@chakra-ui/react'
 
 function Navbar() {
   const [session, loading] = useSession()
 
   return (
-        <SimpleGrid
-          columns={[2, 2, 4, 5]}
-          pt="50px"
-          pl="250px"
-        >
-            <Link href="/">
-              <a>Home</a>
-            </Link>    
-            <Link href="/mypage">
-              <a>My Page</a>
-            </Link>
-            <Link href="/myindex">
-              <a>My Index</a>
-            </Link>
-            <Link href="/myaccount">
-              <a>My Account</a>
-            </Link>
-            {!loading && !session && (
-              <Link href="/api/auth/signin">
-                <a
-                  onClick={(e) => {
-                    e.preventDefault()
-                    signIn("github")
-                  }}
-                >
-                  Sign In
-                </a>
-              </Link>
-            )}
-            {session && (
-              <Link href="/api/auth/signout">
-                <a
-                  onClick={(e) => {
-                    e.preventDefault()
-                    signOut()
-                  }}
-                >
-                  Sign Out
-                </a>
-              </Link>
-            )}
-        </SimpleGrid>
+    <>
+      <SimpleGrid columns={[2, 2, 4, 5]} pt="50px" pl="250px">
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/mypage">
+          <a>My Page</a>
+        </Link>
+        <Link href="/myindex">
+          <a>My Index</a>
+        </Link>
+        <Link href="/myaccount">
+          <a>My Account</a>
+        </Link>
+        {!loading && !session && (
+          <Link href="/api/auth/signin">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                signIn('github')
+              }}
+            >
+              Sign In
+            </a>
+          </Link>
+        )}
+        {session && (
+          <Link href="/api/auth/signout">
+            <a
+              onClick={(e) => {
+                e.preventDefault()
+                signOut()
+              }}
+            >
+              Sign Out
+            </a>
+          </Link>
+        )}
+      </SimpleGrid>
+      <SimpleGrid columns={[2, 2, 4, 1]} pt="50px" pl="250px">
+        <Link href="/users">
+          <a>Users</a>
+        </Link>
+        <Link href="/writers">
+          <a>Writers</a>
+        </Link>
+        <Link href="/blog-posts">
+          <a>Blog Posts</a>
+        </Link>
+      </SimpleGrid>
+    </>
   )
 }
 
