@@ -1,4 +1,4 @@
-import { Heading, Stack, Text, VStack } from '@chakra-ui/react'
+import { Stack, Text, VStack } from '@chakra-ui/react'
 import { useState } from 'react'
 
 function UsersPage() {
@@ -6,13 +6,13 @@ function UsersPage() {
   const [user, setUser] = useState('')
 
   const fetchComments = async () => {
-    const response = await fetch('/api/hello')
+    const response = await fetch('/api/users')
     const data = await response.json()
     setUsers(data)
   }
 
   const submitUser = async () => {
-    const response = await fetch('/api/hello', {
+    const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ user }),
       headers: {
@@ -22,29 +22,6 @@ function UsersPage() {
     const data = await response.json()
     console.log(data)
   }
-
-  // const [users, setUsers] = useState([])
-  // const [name, setName] = useState('')
-  // const fetchComments = async () => {
-  //   const response = await fetch('/api/hello')
-  //   const data = await response.json()
-  //   console.log(data)
-  //   setUsers(data)
-  // }
-  // const submitName = async () => {
-  //   const response = await fetch('/api/hello', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({ name }),
-  //   })
-  //   const data = await response.json()
-  //   console.log(
-  //     'here is what you get... from here on we handle data in our api route folder',
-  //     data
-  //   )
-  // }
 
   return (
     <div>
